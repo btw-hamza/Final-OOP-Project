@@ -1,4 +1,5 @@
 Chess Game – OOP Final Project
+
 A fully functional console-based Chess Game in C++ developed as the final project for the Object Oriented Programming (OOP) Lab course at FAST National University of Computer and Emerging Sciences.
 
 Group Members
@@ -9,13 +10,17 @@ Group Members
 | 25F-0807    | Muhammad Ali Shahid  |
 
 Course Information
+
 Course: Object Oriented Programming Lab
 Instructor: Wania Fatima
 Semester: Spring 2026
 
 Introduction
+
 Chess is one of the oldest and most strategic board games in the world.
+
 This project implements a complete console-based Chess Game in C++ supporting:
+
 Legal move validation
 Check and checkmate detection
 Stalemate detection
@@ -26,6 +31,7 @@ Material score system
 ANSI colored console interface
 
 The project was designed to demonstrate strong understanding of:
+
 Encapsulation
 Inheritance
 Polymorphism
@@ -34,6 +40,7 @@ Dynamic Memory Allocation (DMA)
 The codebase is modular, clean, and extensible.
 
 Project Structure
+
 ├── Pieces.h
 ├── Pieces.cpp
 ├── Board.h
@@ -60,6 +67,7 @@ OOP Concepts Demonstrated
 | Enums                     | Used for colors and promotion choices                                        |
 
 Encapsulation
+
 The project protects internal state using private/protected members.
 Example
 protected:
@@ -78,6 +86,7 @@ En passant tracking
 Board state management
 
 Inheritance
+
 All chess pieces inherit from the abstract Piece base class.
 class Pawn : public Piece
 class Rook : public Piece
@@ -89,6 +98,7 @@ Each derived class implements its own movement logic through:
 isValidMove()
 
 Polymorphism
+
 The project heavily uses runtime polymorphism.
 The board stores all pieces as:
 Piece* grid[8][8];
@@ -104,6 +114,7 @@ p->isValidMove(...)
 The correct derived function is automatically called through virtual dispatch.
 
 Composition
+
 The Board class HAS-A collection of chess pieces.
 Piece* grid[ROWS][COLS];
 The board:
@@ -114,6 +125,7 @@ Deletes pieces
 This demonstrates strong composition and ownership.
 
 Dynamic Memory Allocation
+
 All pieces are allocated dynamically:
 grid[6][i] = new Pawn(WHITE);
 grid[0][4] = new King(BLACK);
@@ -146,6 +158,7 @@ The game uses ANSI escape codes for a better console experience.
 | Red    | Check warning  |
 
 How to Run
+
 Compile
 g++ Main.cpp Board.cpp Pieces.cpp -o chess
 Run
@@ -153,6 +166,7 @@ Run
 Key Learning Outcomes
 
 Through this project we learned:
+
 Real-world implementation of OOP principles
 Runtime polymorphism in large systems
 Dynamic memory management
@@ -160,7 +174,8 @@ Complex game logic handling
 State simulation and rollback systems
 Modular software design in C++
 
-Conclusion
+Conclusion:
+
 This project successfully demonstrates all major Object-Oriented Programming concepts through a complete playable chess game.
 The system includes:
 Clean architecture
@@ -170,7 +185,8 @@ Dynamic memory handling
 Advanced rule validation
 The result is a polished semester-level C++ project that combines both strong programming fundamentals and practical software engineering concepts.
 
-Suggested Future Improvements
+Suggested Future Improvements:
+
 GUI version using SFML or SDL
 AI opponent using Minimax Algorithm
 Save/Load game system
@@ -179,4 +195,5 @@ Move history and replay system
 Undo/Redo functionality
 
 License
+
 This project was developed for academic purposes as part of the OOP Lab course at FAST National University of Computer and Emerging Sciences.
